@@ -1,0 +1,189 @@
+                <li class="col-sm-4">
+
+                  <div class="shop-item">    
+                    <div class="thumbnail">
+                      <a class="shop-item-image" href="#">
+                        <img class="img-fluid" src="src/images/perro_1.jpg" alt="image" />
+                        
+                      </a>
+                    </div>
+                    <div class="shop-item-summary">
+                      <h3>Patita</h3>
+                      <p><strong>G&eacute;nero : </strong> <span>M</span><br>
+                      <strong>Tama&ntilde;o : </strong> <span>CH</span><br>
+                      <strong>Raza : </strong> <span>Pitbull</span><br>
+                    </div>
+                      <div class="shop-item-buttons text-center">
+                        <a class="btn btn-light" href="#"><i class="fa fa-plus"></i>More Information</a>
+                      </div>
+                  </div>
+
+                </li>
+                <li class="col-sm-4">
+
+                    <div class="shop-item">    
+                      <div class="thumbnail">
+                        <a class="shop-item-image" href="#">
+                          <img class="img-fluid" src="src/images/perro_1.jpg" alt="image" />
+                          
+                        </a>
+                      </div>
+                      <div class="shop-item-summary">
+                        <h3>Patita</h3>
+                        <p><strong>G&eacute;nero : </strong> <span>M</span><br>
+                        <strong>Tama&ntilde;o : </strong> <span>CH</span><br>
+                        <strong>Raza : </strong> <span>Pitbull</span><br>
+                      </div>
+                        <div class="shop-item-buttons text-center">
+                          <a class="btn btn-light" href="#"><i class="fa fa-plus"></i>More Information</a>
+                        </div>
+                    </div>
+  
+                </li>
+                <li class="col-sm-4">
+
+                    <div class="shop-item">    
+                      <div class="thumbnail">
+                        <a class="shop-item-image" href="#">
+                          <img class="img-fluid" src="src/images/perro_1.jpg" alt="image" />
+                          
+                        </a>
+                      </div>
+                      <div class="shop-item-summary">
+                        <h3>Patita</h3>
+                        <p><strong>G&eacute;nero : </strong> <span>M</span><br>
+                        <strong>Tama&ntilde;o : </strong> <span>CH</span><br>
+                        <strong>Raza : </strong> <span>Pitbull</span><br>
+                      </div>
+                        <div class="shop-item-buttons text-center">
+                          <a class="btn btn-light" href="#"><i class="fa fa-plus"></i>More Information</a>
+                        </div>
+                    </div>
+  
+                </li>
+                <li class="col-sm-4">
+  
+                      <div class="shop-item">    
+                        <div class="thumbnail">
+                          <a class="shop-item-image" href="#">
+                            <img class="img-fluid" src="src/images/perro_1.jpg" alt="image" />
+                            
+                          </a>
+                        </div>
+                        <div class="shop-item-summary">
+                          <h3>Patita</h3>
+                          <p><strong>G&eacute;nero : </strong> <span>M</span><br>
+                          <strong>Tama&ntilde;o : </strong> <span>CH</span><br>
+                          <strong>Raza : </strong> <span>Pitbull</span><br>
+                        </div>
+                          <div class="shop-item-buttons text-center">
+                            <a class="btn btn-light" href="#"><i class="fa fa-plus"></i>More Information</a>
+                          </div>
+                      </div>
+    
+                </li>
+                <li class="col-sm-4">
+
+                    <div class="shop-item">    
+                      <div class="thumbnail">
+                        <a class="shop-item-image" href="#">
+                          <img class="img-fluid" src="src/images/perro_1.jpg" alt="image" />
+                          
+                        </a>
+                      </div>
+                      <div class="shop-item-summary">
+                        <h3>Patita</h3>
+                        <p><strong>G&eacute;nero : </strong> <span>M</span><br>
+                        <strong>Tama&ntilde;o : </strong> <span>CH</span><br>
+                        <strong>Raza : </strong> <span>Pitbull</span><br>
+                      </div>
+                        <div class="shop-item-buttons text-center">
+                          <a class="btn btn-light" href="#"><i class="fa fa-plus"></i>More Information</a>
+                        </div>
+                    </div>
+  
+                </li>
+                <li class="col-sm-4">
+  
+                      <div class="shop-item">    
+                        <div class="thumbnail">
+                          <a class="shop-item-image" href="#">
+                            <img class="img-fluid" src="src/images/perro_1.jpg" alt="image" />
+                            
+                          </a>
+                        </div>
+                        <div class="shop-item-summary">
+                          <h3>Patita</h3>
+                          <p><strong>G&eacute;nero : </strong> <span>M</span><br>
+                          <strong>Tama&ntilde;o : </strong> <span>CH</span><br>
+                          <strong>Raza : </strong> <span>Pitbull</span><br>
+                        </div>
+                          <div class="shop-item-buttons text-center">
+                            <a class="btn btn-light" href="#"><i class="fa fa-plus"></i>More Information</a>
+                          </div>
+                      </div>
+    
+                </li>
+                <li class="col-sm-4">
+
+                    <div class="shop-item">    
+                      <div class="thumbnail">
+                        <a class="shop-item-image" href="#">
+                          <img class="img-fluid" src="src/images/perro_1.jpg" alt="image" />
+                          
+                        </a>
+                      </div>
+                      <div class="shop-item-summary">
+                        <h3>Patita</h3>
+                        <p><strong>G&eacute;nero : </strong> <span>M</span><br>
+                        <strong>Tama&ntilde;o : </strong> <span>CH</span><br>
+                        <strong>Raza : </strong> <span>Pitbull</span><br>
+                      </div>
+                        <div class="shop-item-buttons text-center">
+                          <a class="btn btn-light" href="#"><i class="fa fa-plus"></i>More Information</a>
+                        </div>
+                    </div>
+  
+                </li>
+                <li class="col-sm-4">
+
+                    <div class="shop-item">    
+                      <div class="thumbnail">
+                        <a class="shop-item-image" href="#">
+                          <img class="img-fluid" src="src/images/perro_1.jpg" alt="image" />
+                          
+                        </a>
+                      </div>
+                      <div class="shop-item-summary">
+                        <h3>Patita</h3>
+                        <p><strong>G&eacute;nero : </strong> <span>M</span><br>
+                        <strong>Tama&ntilde;o : </strong> <span>CH</span><br>
+                        <strong>Raza : </strong> <span>Pitbull</span><br>
+                      </div>
+                        <div class="shop-item-buttons text-center">
+                          <a class="btn btn-light" href="#"><i class="fa fa-plus"></i>More Information</a>
+                        </div>
+                    </div>
+  
+                </li>
+                <li class="col-sm-4">
+
+                    <div class="shop-item">    
+                      <div class="thumbnail">
+                        <a class="shop-item-image" href="#">
+                          <img class="img-fluid" src="src/images/perro_1.jpg" alt="image" />
+                          
+                        </a>
+                      </div>
+                      <div class="shop-item-summary">
+                        <h3>Patita</h3>
+                        <p><strong>G&eacute;nero : </strong> <span>M</span><br>
+                        <strong>Tama&ntilde;o : </strong> <span>CH</span><br>
+                        <strong>Raza : </strong> <span>Pitbull</span><br>
+                      </div>
+                        <div class="shop-item-buttons text-center">
+                          <a class="btn btn-light" href="#"><i class="fa fa-plus"></i>More Information</a>
+                        </div>
+                    </div>
+  
+                </li>

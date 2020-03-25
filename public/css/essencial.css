@@ -1,0 +1,62 @@
+
+  /*HEADER*/
+  header{
+    background-color: #001f42 !important; 
+    height: 50px;
+  } 
+
+  header a:link, header a:visited,header p{
+    color: white;
+  }
+
+  header{
+    background-color: white ;
+    color: white;
+  }
+
+  header li{
+    font-weight: bold;
+    margin-left: 4px;
+    display: inline;
+    float: right;
+  }
+
+  header ul{
+    margin-top: -30px;
+  }
+
+  #titulo{
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-size: 20px ;
+    margin-left: -80px;
+  }
+
+  /*NAV*/
+  .nav-scroller.py-1.mb-2{
+    background-color: white;
+    margin-top: -20px;
+  }
+
+    /*FOOTER*/
+    footer{
+    /* background-color: #6b6b6b; */
+    background-color: black;
+    color: white;
+    margin-bottom: 0px;
+    }
+
+    footer .center-block{
+      margin-left:auto;
+      margin-right:auto;
+     display:block;
+    }
+
+    #tituloFooter{
+      font-weight: bold;
+      font-size: 20px;
+    }
+
+    footer a:link,footer a:visited{
+      color: white;
+    }

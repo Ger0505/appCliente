@@ -1,0 +1,66 @@
+extends layout
+
+block content
+  script(src="./javascripts/jquery.js")
+  //script(src="./javascripts/funciones.js")
+  head
+    style(type='text/css').
+        table {
+            border-collapse : collapse;
+        }
+
+        td, th {
+          border: black 1px solid;
+        }
+  h1 Aplicaci&oacute;n Estudiantes
+  //- p #{titulo}
+  div
+    h3 Inicio
+    a(href="#") Registrar Estudiante
+    br
+    a(href="#") Buscar Estudiante
+    br
+    a(href="#") Eliminar Estudiante
+    br
+    a(href="#") Actualizar Estudiante
+    br
+    a(href="#") Otra opci&oacute;n
+    br
+  div
+    h2 Lista Estudiantes
+    table
+      tr
+        th id_est
+        th Nombre
+        th Apellido Paterno
+        th Apellido Materno
+        th Sexo
+        th id_dir
+        th id_con
+        th curp
+        th fecha_nacimiento
+        th estatus
+        th id_civ
+        th id_med
+        th id_aca
+        th id_per
+        th id_tur
+      tr
+        td
+        td
+        td
+        td
+        td
+        td
+        td
+        td
+        td
+        td
+        td
+        td
+        td
+        td
+        td
+
+
+    //input(type="button", value="Mostrar", id="btn")
