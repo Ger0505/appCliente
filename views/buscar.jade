@@ -1,8 +1,6 @@
 extends layout
 
 block content
-  script(src="./javascripts/jquery.js")
-  //script(src="./javascripts/funciones.js")
   head
     style(type='text/css').
         table {
@@ -12,46 +10,48 @@ block content
         td, th {
           border: black 1px solid;
         }
+  
+  nav
+    a(href="/index") Inicio
+    br
+    a(href="/registrar") Registrar Estudiante
+    br
+    a(href="/buscar") Buscar Estudiante
+    br
+    a(href="/eliminar") Eliminar Estudiante
+    br
+    a(href="/actualizar") Actualizar Estudiante
+    br
+    a(href="#") Otra opci&oacute;n
+    
+    
+  nav
+    a(href="/") Inicio
+    br
+    a(href="/registrar") Registrar Estudiante
+    br
+    //a(href="/buscar") Buscar Estudiante
+    //br
+    a(href="/eliminar") Eliminar Estudiante
+    br
+    a(href="/actualizar") Actualizar Estudiante
+    br
+    a(href="#") Otra opci&oacute;n
   h1 Buscar Estudiante
-  //- p #{titulo}
   div
-    input(type="text" name="busqueda" id="busqueda" placeholder="Parametro de Búsqueda")
-    button(id="buscar") Search
-  div
-    h2 Buscar Estudiante
+    p
+      input(type="text" name="datoBuscar" id="datoBuscar" placeholder="Parametro de Búsqueda")
+      button(id="buscar" name="buscar") Search
     table
-      tr
-        th id_est
-        th Nombre
-        th Apellido Paterno
-        th Apellido Materno
-        th Sexo
-        th id_dir
-        th id_con
-        th curp
-        th fecha_nacimiento
-        th estatus
-        th id_civ
-        th id_med
-        th id_aca
-        th id_per
-        th id_tur
-      tr
-        td
-        td
-        td
-        td
-        td
-        td
-        td
-        td
-        td
-        td
-        td
-        td
-        td
-        td
-        td
+      thead
+        td Nombre
+        td Apellido Paterno
+        td Apellido Materno
+      tbody
+  
+  script(src="./javascripts/jquery.js")
+  script(src="./javascripts/funciones.js")
+
 
 
     //input(type="button", value="Mostrar", id="btn")

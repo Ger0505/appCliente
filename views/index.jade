@@ -1,66 +1,105 @@
 extends layout
 
 block content
-  script(src="./javascripts/jquery.js")
-  //script(src="./javascripts/funciones.js")
   head
     style(type='text/css').
         table {
             border-collapse : collapse;
         }
 
-        td, th {
+        th, th {
           border: black 1px solid;
         }
-  h1 Aplicaci&oacute;n Estudiantes
-  //- p #{titulo}
-  div
-    h3 Inicio
-    a(href="#") Registrar Estudiante
+
+  div(class="contenedor")
+    h1 Aplicaci&oacute;n Estudiantes
+
+  nav
+    a(href="/") Inicio
     br
-    a(href="#") Buscar Estudiante
+    a(href="/registrar") Registrar Estudiante
     br
-    a(href="#") Eliminar Estudiante
+    //a(href="/buscar") Buscar Estudiante
+    //br
+    a(href="/eliminar") Eliminar Estudiante
     br
-    a(href="#") Actualizar Estudiante
+    a(href="/actualizar") Actualizar Estudiante
     br
     a(href="#") Otra opci&oacute;n
-    br
+    
+
   div
     h2 Lista Estudiantes
-    table
-      tr
-        th id_est
-        th Nombre
-        th Apellido Paterno
-        th Apellido Materno
-        th Sexo
-        th id_dir
-        th id_con
-        th curp
-        th fecha_nacimiento
-        th estatus
-        th id_civ
-        th id_med
-        th id_aca
-        th id_per
-        th id_tur
-      tr
-        td
-        td
-        td
-        td
-        td
-        td
-        td
-        td
-        td
-        td
-        td
-        td
-        td
-        td
-        td
+    div
+      p
+      select(name="filtro" id="filtro")
+        option(value="0") Nombre
+        option(value="1") Municipio
+        option(value="2") Promedio
+        option(value="3") Escuela
+      select(name="orden" id="orden")
+        option(value="ASC") ASC
+        option(value="DESC") DESC
+      input(type="button" name="filtrar" id="filtrar" value="Filtrar")
+    
+    //- table(id="tablaInicio"  class="display")
+    //-   thead
+    //-     tr
+    //-       th Per.ap_paterno,
+    //-       th Per.ap_materno,
+    //-       th Per.nombre,
+    //-       th Per.sexo,
+    //-       th Est.fecha_nacimiento,
+    //-       th Est.curp,
+    //-       th Dir.calle,
+    //-       th Dir.numero,
+    //-       th Dir.colonia,
+    //-       th Dir.municipio,
+    //-       th Dir.estado,
+    //-       th Dir.pais,
+    //-       th Dir.cp,
+    //-       th Con.email,
+    //-       th Con.tel,
+    //-       th Con.celular,
+    //-       th Civ.estado_civil,
+    //-       th Med.tipo_sangre,
+    //-       th Med.nss,
+    //-       th Med.alergias,
+    //-       th Aca.promedio,
+    //-       th Aca.esc_procedencia,
+    //-       th Aca.fecha_egreso
+    //-   tbody
+    table(id="tablaInicio2")
+      thead
+        tr
+          th Apellido Paterno,
+          th Apellido Materno,
+          th Nombre,
+          th Sexo,
+          th Fecha de Nacimiento,
+          th Curp,
+          th Calle,
+          th Numero,
+          th Colonia,
+          th Municipio,
+          th Estado,
+          th Pais,
+          th Cp,
+          th Email,
+          th Tel,
+          th Celular,
+          th Estado Civil,
+          th Tipo Sangre,
+          th NSS,
+          th Alergias,
+          th Promedio,
+          th Escuela Procedencia,
+          th Fecha de Egreso
+      tbody
 
+    
+  link(rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.css")
+  script(src="./javascripts/jquery.js")
+  script(src="./javascripts/funciones.js")
+  script(type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.js")
 
-    //input(type="button", value="Mostrar", id="btn")
