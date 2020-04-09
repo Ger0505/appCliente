@@ -10,48 +10,80 @@ block content
         td, th {
           border: black 1px solid;
         }
+
+        .container{
+          margin-top: 20px;
+          background-color: white;
+        }
   
-  nav
-    a(href="/index") Inicio
-    br
-    a(href="/registrar") Registrar Estudiante
-    br
-    a(href="/buscar") Buscar Estudiante
-    br
-    a(href="/eliminar") Eliminar Estudiante
-    br
-    a(href="/actualizar") Actualizar Estudiante
-    br
-    a(href="#") Otra opci&oacute;n
-    
-    
-  nav
-    a(href="/") Inicio
-    br
-    a(href="/registrar") Registrar Estudiante
-    br
-    //a(href="/buscar") Buscar Estudiante
-    //br
-    a(href="/eliminar") Eliminar Estudiante
-    br
-    a(href="/actualizar") Actualizar Estudiante
-    br
-    a(href="#") Otra opci&oacute;n
-  h1 Buscar Estudiante
-  div
-    p
-      input(type="text" name="datoBuscar" id="datoBuscar" placeholder="Parametro de Búsqueda")
-      button(id="buscar" name="buscar") Search
-    table
-      thead
-        td Nombre
-        td Apellido Paterno
-        td Apellido Materno
-      tbody
+  nav(class="navbar navbar-expand-md bg-dark navbar-dark")
+        <!-- Brand -->
+        a(class="navbar-brand" href="/") Estudiante
+
+        <!-- Toggler/collapsibe Button -->
+        button(class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar")
+            span(class="navbar-toggler-icon")
+
+        <!-- Navbar links -->
+        div(class="collapse navbar-collapse" id="collapsibleNavbar")
+            ul(class="navbar-nav")
+                li(class="nav-item")
+                    a(class="nav-link" href="/") Inicio
+                li(class="nav-item")
+                    a(class="nav-link" href="/registrar") Registrar Estudiante
+                li(class="nav-item")
+                    a(class="nav-link" href="/buscar") Buscar Estudiante
+                li(class="nav-item")
+                    a(class="nav-link" href="/eliminar") Eliminar Estudiante
+                li(class="nav-item")
+                    a(class="nav-link" href="/actualizar") Actualizar Estudiante
   
+
+  div(class="container")
+    h1 Buscar Estudiante
+    form(action="")
+        div(class="col-auto")
+            label(class="sr-only" for="inlineFormInputGroup") Username
+            div(class="input-group mb-2")
+                div(class="input-group-prepend")
+                    div(class="input-group-text") #
+                
+                input(type="text" class="form-control" id="datoBuscar" placeholder="ID de Estudiante")
+                input(type="button" name="btnBuscar" id ="btnBuscar" value="Buscar" class="btn btn-success")
+    div(class="table-responsive")
+      table(id="tablaEstudiante" class="table table-bordered table-striped")
+        thead(class="thead-dark")
+          tr
+            th ID
+            th Status
+            th Apellido Paterno
+            th Apellido Materno
+            th Nombre
+            th Sexo
+            th Fecha de Nacimiento
+            th CURP
+            th Calle
+            th N&uacute;mero
+            th Colonia
+            th Municipio
+            th Estado
+            th Pais
+            th CP
+            th Email
+            th Tel
+            th Cel
+            th Estado Civil
+            th Tipo de Sangre
+            th NSS
+            th Alergias
+            th Promedio
+            th Escuela Procedencia
+            th Fecha de Egreso
+        tbody
+  
+  link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css")
   script(src="./javascripts/jquery.js")
   script(src="./javascripts/funciones.js")
-
-
-
-    //input(type="button", value="Mostrar", id="btn")
+  script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js")
+  script(src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js")
+  script(src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js")

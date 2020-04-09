@@ -1,189 +1,138 @@
 extends layout
 
 block content
-  head
-    style(type='text/css').
-        html{
-            background-color:orange;
-        }
+    head
+        style(type='text/css').
+            body{
+                background:url("./images/hospital4.jpg");
+            }
 
-        .contenedor{
-            width: 1000px;
-            margin: auto;
-            background-color: white;
-        }
+            .container{
+                margin-top: 20px;
+                margin-bottom: 20px;
+                padding-bottom:10px;
+                background-color: white;
+            }
 
-        .etiq{
-            float: left; 
-            width: 230px;
-            text-align: right;
-            margin-right: 10px;
-        }   
-           
-  div(class = "contenedor")
-    nav
-    a(href="/index") Inicio
-    br
-    a(href="/registrar") Registrar Estudiante
-    br
-    a(href="/buscar") Buscar Estudiante
-    br
-    a(href="/eliminar") Eliminar Estudiante
-    br
-    a(href="/actualizar") Actualizar Estudiante
-    br
-    a(href="#") Otra opci&oacute;n
-    
-    h1 Formulario de Registro Estudiante
-    form(id="subForm" name="subForm" method="GET" action="")
-        p 
-            label(for="nombre" class="etiq") Nombre
-            input(type="text" name="nombre" id="nombre")
-        p 
-            label(for="paterno" class="etiq") Apellido Paterno
-            input(type="text" name="paterno" id="paterno")
-        p 
-            label(for="materno" class="etiq") Apellido Materno
-            input(type="text" name="materno" id="materno")
-        p 
-            label(for="sexo" class="etiq") Sexo
-            select(name="sexo" id="sexo")
-                option(value="M") M
-                option(value="F") F
-        p 
-            label(for="email" class="etiq") Email
-            input(type="email" name="email" id="email")
-        p 
-            label(for="tel" class="etiq") Tel&eacute;fono
-            input(type="tel" name="tel" id="tel")
-        p 
-            label(for="cel" class="etiq") Celular
-            input(type="tel" name="cel" id="cel")
-        p 
-            label(for="pais" class="etiq") Pa&iacute;s
-            input(type="text" name="pais" id="pais")
-        p 
-            label(for="estado" class="etiq") Estado
-            input(type="text" name="estado" id="estado")
-        p 
-            label(for="municipio" class="etiq") Municipio
-            input(type="text" name="municipio" id="municipio")
-        p 
-            label(for="colonia" class="etiq") Colonia
-            input(type="text" name="colonia" id="colonia")
-        p 
-            label(for="calle" class="etiq") Calle
-            input(type="text" name="calle" id="calle")
-        p 
-            label(for="num" class="etiq") N&uacute;mero
-            input(type="number" name="num" id="num")
-        p 
-            label(for="cp" class="etiq") C&oacute;digo Postal
-            input(type="text" name="cp" id="cp")
-        p 
-            label(for="curp" class="etiq")  CURP
-            input(type="text" name="curp" id="curp")
-        p 
-            label(for="fenac" class="etiq") Fecha de nacimiento
-            input(type="date" name="fenac" id="fenac")
-        //- p 
-        //-     label(for="estatus" class="etiq") Estatus
-        //-     select(name="estatus" id="estatus")
-        //-         option(value="1") Activo
-        //-         option(value="0") Inactivo
-        p 
-            label(for="civil" class="etiq") Estado Civil
-            select(name="civil" id="civil")
-                option(value="1") Soltero(a)
-                option(value="2") Casado(a)
-                option(value="3") Unión Libre
-                option(value="4") Comprometido(a)
-        p 
-            label(for="sangre" class="etiq") Tipo de sangre
-            select(name="sangre" id="sangre")
-                option(value="O+") O+
-                option(value="O-") O-
-                option(value="A+") A+
-                option(value="A-") A-
-                option(value="B+") B+
-                option(value="B-") B-
-                option(value="AB+") AB+
-                option(value="AB-") AB-
-        p 
-            label(for="nss" class="etiq") N&uacute;mero de Seguro Social
-            input(type="number" name="nss" id="nss")
-        p 
-            label(for="alergias" class="etiq") Alergias
-            input(type="text" name="alergias" id="alergias")
-        p 
-            label(for="escuela" class="etiq") Escuela de Procedencia
-            input(type="text" name="escuela" id="escuela")
-        p 
-            label(for="egreso" class="etiq") Fecha de Egreso
-            input(type="date" name="egreso" id="fechegreso")
-        p 
-            label(for="promedio" class="etiq") Promedio de Egreso
-            input(type="text" name="promedio" id="promedio")
-        p   
-            label(for="tutor" class="etiq") Promedio de Egreso
-            input(type="number" name="tutor" id="tutor")
-        //- h3 Tutor
-        //- p 
-        //-     label(for="pnombre" class="etiq") Nombre
-        //-     input(type="text" name="pnombre" id="pnombre")
-        //- p 
-        //-     label(for="ppaterno" class="etiq") Apellido Paterno
-        //-     input(type="text" name="ppaterno" id="ppaterno")
-        //- p 
-        //-     label(for="pmaterno" class="etiq") Apellido Materno
-        //-     input(type="text" name="pmaterno" id="pmaterno")
-        //- p 
-        //-     label(for="psexo" class="etiq") Sexo
-        //-     select(name="psexo" id="psexo")
-        //-         option(value="M") M
-        //-         option(value="F") F
-        //- p 
-        //-     label(for="pemail" class="etiq") Email
-        //-     input(type="email" name="pemail" id="pemail")
-        //- p 
-        //-     label(for="ptel" class="etiq") Tel&eacute;fono
-        //-     input(type="tel" name="ptel" id="ptel")
-        //- p 
-        //-     label(for="pcel" class="etiq") Celular
-        //-     input(type="tel" name="pcel" id="pcel")
-        //- p 
-        //-     label(for="ppais" class="etiq") Pa&iacute;s
-        //-     input(type="text" name="ppais" id="ppais")
-        //- p 
-        //-     label(for="pestado" class="etiq") Estado
-        //-     input(type="text" name="pestado" id="pestado")
-        //- p 
-        //-     label(for="pmunicipio" class="etiq") Municipio
-        //-     input(type="text" name="pmunicipio" id="pmunicipio")
-        //- p 
-        //-     label(for="pcolonia" class="etiq") Colonia
-        //-     input(type="text" name="pcolonia" id="pcolonia")
-        //- p 
-        //-     label(for="pcalle" class="etiq") Calle
-        //-     input(type="text" name="pcalle" id="pcalle")
-        //- p 
-        //-     label(for="pnum" class="etiq") N&uacute;mero
-        //-     input(type="number" name="pnum" id="pnum")
-        //- p 
-        //-     label(for="pcp" class="etiq") C&oacute;digo Postal
-        //-     input(type="text" name="cp" id="pcp")
-        //- p 
-        //-     label(for="pcurp" class="etiq")  CURP
-        //-     input(type="text" name="curp" id="pcurp")
-        //- p 
-        //-     label(for="pfenac" class="etiq") Fecha de nacimiento
-        //-     input(type="date" name="pfenac" id="pfenac")
-        p
-            input(type="button" name="nuevo" id="nuevo" value="Nuevo")
-        p
-            input(type="button" name="cancelar" id="cancelar" value="Cancelar")
-   
+    nav(class="navbar navbar-expand-md bg-dark navbar-dark")
+        <!-- Brand -->
+        a(class="navbar-brand" href="/") Estudiante
+
+        <!-- Toggler/collapsibe Button -->
+        button(class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar")
+            span(class="navbar-toggler-icon")
+
+        <!-- Navbar links -->
+        div(class="collapse navbar-collapse" id="collapsibleNavbar")
+            ul(class="navbar-nav")
+                li(class="nav-item")
+                    a(class="nav-link" href="/") Inicio
+                li(class="nav-item")
+                    a(class="nav-link" href="/registrar") Registrar Estudiante
+                li(class="nav-item")
+                    a(class="nav-link" href="/buscar") Buscar Estudiante
+                li(class="nav-item")
+                    a(class="nav-link" href="/eliminar") Eliminar Estudiante
+                li(class="nav-item")
+                    a(class="nav-link" href="/actualizar") Actualizar Estudiante
+  
+
+    div(class = "container")
+        h2 Formulario de Registro Estudiante
+        form(id="subForm" name="subForm" method="GET" action="")
+            div(class="form-group")
+                label(for="nombre") Nombre(s):
+                input(type="text" class="form-control"   id="nombre")
+            div(class="form-group")
+                label(for="paterno") Apellido Paterno:
+                input(type="text" class="form-control"  id="paterno")
+            div(class="form-group")
+                label(for="materno") Apellido Materno:
+                input(type="text" class="form-control"  id="materno")
+            div(class="form-group")
+                label(for="sexo") Sexo:
+                select(class="form-control"  id="sexo")
+                    option(value="M") Masculino
+                    option(value="F") Femenino
+            div(class="form-group")
+                label(for="email") Email:
+                input(type="email" class="form-control"  id="email")
+            div(class="form-group")
+                label(for="tel") Tel&eacute;fono:
+                input(type="text" class="form-control"  id="tel")
+            div(class="form-group")
+                label(for="cel") Celular:
+                input(type="tel" class="form-control"  id="cel")
+            div(class="form-group")
+                label(for="pais") Pais:
+                input(type="text" class="form-control"  id="pais")
+            div(class="form-group")
+                label(for="estado") Estado:
+                input(type="text" class="form-control"  id="estado")
+            div(class="form-group")
+                label(for="municipio") Municipio:
+                input(type="text" class="form-control"  id="municipio")
+            div(class="form-group")
+                label(for="colonia") Colonia:
+                input(type="text" class="form-control"  id="colonia")
+            div(class="form-group")
+                label(for="calle") Calle:
+                input(type="text" class="form-control"  id="calle")
+            div(class="form-group")
+                label(for="num") N&uacute;mero:
+                input(type="number" class="form-control"  id="num")
+            div(class="form-group")
+                label(for="cp") C&oacute;digo Postal:
+                input(type="number" class="form-control"  id="cp")
+            div(class="form-group")
+                label(for="curp") CURP:
+                input(type="text" class="form-control"  id="cp")
+            div(class="form-group")
+                label(for="fenac") Fecha de Nacimiento:
+                input(type="date" class="form-control"  id="fenac")
+            div(class="form-group")
+                label(for="civil") Estado Civil:
+                select(class="form-control"  id="civil")
+                    option(value="1") Soltero(a)
+                    option(value="2") Casado(a)
+                    option(value="3") Uni&oacute;n Libre
+                    option(value="4") Comprometido(a)
+            div(class="form-group")
+                label(for="sangre") Tipo de Sangre:
+                select(class="form-control"  id="sangre")
+                    option(value="O+") O+
+                    option(value="O-") O-
+                    option(value="A+") A+
+                    option(value="A-") A-
+                    option(value="B+") B+
+                    option(value="B-") B-
+                    option(value="AB+") AB+
+                    option(value="AB-") AB-
+            div(class="form-group")
+                label(for="nss") N&uacute;mero de Seguro Social:
+                input(type="text" class="form-control"  id="nss")
+            div(class="form-group")
+                label(for="alergias") Alergias:
+                input(type="text" class="form-control"  id="alergias")
+            div(class="form-group")
+                label(for="escuela") Escuela de Procedencia:
+                input(type="text" class="form-control"  id="escuela")
+            div(class="form-group")
+                label(for="egreso") Fecha de Egreso:
+                input(type="date" class="form-control"  id="egreso")
+            div(class="form-group")
+                label(for="promedio") Promedio de Egreso:
+                input(type="text" class="form-control"  id="promedio")
+            div(class="form-group")
+                label(for="tutor") ID de Tutor:
+                input(type="number" class="form-control"  id="tutor")
+
+
+            button(type="button" name="btnRegistrar" id="btnRegistrar" value="btnRegistrar" class="btn btn-primary") Submit
+
+    link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css")
     script(src="./javascripts/jquery.js")
     script(src="./javascripts/funciones.js")
-
-    //input(type="button", value="Mostrar", id="btn")
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js")
+    script(src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js")

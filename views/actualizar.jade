@@ -1,75 +1,80 @@
 extends layout
 
 block content
-  head
-    style(type='text/css').
-        html{
-            background-color:orange;
-        }
+    head
+        style(type='text/css').
 
-        .contenedor{
-            width: 1000px;
-            margin: auto;
-            background-color: white;
-        }
+            .container{
+                margin-top: 20px;
+                margin-bottom: 20px;
+                padding-bottom:10px;
+                background-color: white;
+            }
+  
+    nav(class="navbar navbar-expand-md bg-dark navbar-dark")
+        <!-- Brand -->
+        a(class="navbar-brand" href="/") Estudiante
 
-        .etiq{
-            float: left; 
-            width: 230px;
-            text-align: right;
-            margin-right: 10px;
-        }   
-           
-  div(class = "contenedor")
+        <!-- Toggler/collapsibe Button -->
+        button(class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar")
+            span(class="navbar-toggler-icon")
 
-    nav
-        a(href="/") Inicio
-        br
-        a(href="/registrar") Registrar Estudiante
-        br
-        //a(href="/buscar") Buscar Estudiante
-        //br
-        a(href="/eliminar") Eliminar Estudiante
-        br
-        a(href="/actualizar") Actualizar Estudiante
-        br
-        a(href="#") Otra opci&oacute;n
-     
-    h1 Modificación de Dirección
+        <!-- Navbar links -->
+        div(class="collapse navbar-collapse" id="collapsibleNavbar")
+            ul(class="navbar-nav")
+                li(class="nav-item")
+                    a(class="nav-link" href="/") Inicio
+                li(class="nav-item")
+                    a(class="nav-link" href="/registrar") Registrar Estudiante
+                li(class="nav-item")
+                    a(class="nav-link" href="/buscar") Buscar Estudiante
+                li(class="nav-item")
+                    a(class="nav-link" href="/eliminar") Eliminar Estudiante
+                li(class="nav-item")
+                    a(class="nav-link" href="/actualizar") Actualizar Estudiante
 
-    div
-      input(type="text" name="txtID" id="txtID" placeholder="ID de Estudiante")
-      input(type="button" name="btnRellenar" id ="btnRellenar" value="Buscar")
+    div(class = "container")
 
-    form(id="subForm" name="subForm" method="GET" action="")
-        p 
-            label(for="id_dir" class="etiq") ID
-            input(type="text" name="pais" id="id_dir")
-        p 
-            label(for="pais" class="etiq") Pa&iacute;s
-            input(type="text" name="pais" id="pais")
-        p 
-            label(for="estado" class="etiq") Estado
-            input(type="text" name="estado" id="estado")
-        p 
-            label(for="municipio" class="etiq") Municipio
-            input(type="text" name="municipio" id="municipio")
-        p 
-            label(for="colonia" class="etiq") Colonia
-            input(type="text" name="colonia" id="colonia")
-        p 
-            label(for="calle" class="etiq") Calle
-            input(type="text" name="calle" id="calle")
-        p 
-            label(for="num" class="etiq") N&uacute;mero
-            input(type="number" name="num" id="num")
-        p 
-            label(for="cp" class="etiq") C&oacute;digo Postal
-            input(type="text" name="cp" id="cp")
-        p
-            input(type="button" name="nuevo" id="btnActualizar" value="Actualizar")
+        h1 Modificación de Dirección
+        form(action="")
+            div(class="col-auto")
+                label(class="sr-only" for="inlineFormInputGroup") Username
+                div(class="input-group mb-2")
+                    div(class="input-group-prepend")
+                        div(class="input-group-text") #
+                    
+                    input(type="text" class="form-control" id="txtID" placeholder="ID de Estudiante")
+                    input(type="button" name="btnRellenar" id ="btnRellenar" value="Buscar" class="btn btn-success")
+
+         form(id="subForm" name="subForm" method="GET" action="")
+            div(class="form-group")
+                label(for="pais") Pais:
+                input(type="text" class="form-control"  id="pais")
+            div(class="form-group")
+                label(for="estado") Estado:
+                input(type="text" class="form-control"  id="estado")
+            div(class="form-group")
+                label(for="municipio") Municipio:
+                input(type="text" class="form-control"  id="municipio")
+            div(class="form-group")
+                label(for="colonia") Colonia:
+                input(type="text" class="form-control"  id="colonia")
+            div(class="form-group")
+                label(for="calle") Calle:
+                input(type="text" class="form-control"  id="calle")
+            div(class="form-group")
+                label(for="num") N&uacute;mero:
+                input(type="number" class="form-control"  id="num")
+            div(class="form-group")
+                label(for="cp") C&oacute;digo Postal:
+                input(type="number" class="form-control"  id="cp")
+            
+            button(type="button" name="btnActualizar" id="btnActualizar" value="btnActualizar" class="btn btn-primary") Actualizar
+
    
+    link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css")
     script(src="./javascripts/jquery.js")
     script(src="./javascripts/funciones.js")
-
-    //input(type="button", value="Mostrar", id="btn")
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js")
+    script(src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js")

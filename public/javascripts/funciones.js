@@ -3,27 +3,52 @@
  */
 
 $(function(){
-    $('#buscar').click(function(){
+    $('#btnBuscar').click(function(){
 
         var dato = $("#datoBuscar").val();
-        var tablaBody = $("tbody");
+        var tablaBody = $("#tablaEstudiante tbody");
         
         $.ajax({
-            url: 'http://localhost:3000/estudiante/listarestudiantespormunicipio',
+            url: 'http://localhost:3000/estudiante/getUniqueEstudiante/'+dato,
             //data: {'datoBuscar':dato,'orden':'ASC'},
             data: {},
             type: 'GET',
             contentType: 'application/json; charset=UTF-8',
             dataType : 'json',
             success: function(res){
-                for (let i = 0; i < res.response.length; i++) {
-                    console.log(res.response[i].nombre);
+                tablaBody.empty();
+                if(res.response.length != 0){
                     tablaBody.append('<tr>');
-                    tablaBody.append('<td>' +res.response[i].nombre+'</td>')
-                    tablaBody.append('<td>' +res.response[i].ap_paterno+'</td>')
-                    tablaBody.append('<td>' +res.response[i].ap_materno+'</td>')
+                    tablaBody.append('<td>' +res.response[0].id_est+'</td>')
+                    tablaBody.append('<td>' +res.response[0].estatus+'</td>')
+                    tablaBody.append('<td>' +res.response[0].ap_paterno+'</td>')
+                    tablaBody.append('<td>' +res.response[0].ap_materno+'</td>')
+                    tablaBody.append('<td>' +res.response[0].nombre+'</td>')
+                    tablaBody.append('<td>' +res.response[0].sexo+'</td>')
+                    tablaBody.append('<td>' +res.response[0].fecha_nacimiento+'</td>')
+                    tablaBody.append('<td>' +res.response[0].curp+'</td>')
+                    tablaBody.append('<td>' +res.response[0].calle+'</td>')
+                    tablaBody.append('<td>' +res.response[0].numero+'</td>')
+                    tablaBody.append('<td>' +res.response[0].colonia+'</td>')
+                    tablaBody.append('<td>' +res.response[0].municipio+'</td>')
+                    tablaBody.append('<td>' +res.response[0].estado+'</td>')
+                    tablaBody.append('<td>' +res.response[0].pais+'</td>')
+                    tablaBody.append('<td>' +res.response[0].cp+'</td>')
+                    tablaBody.append('<td>' +res.response[0].email+'</td>')
+                    tablaBody.append('<td>' +res.response[0].tel+'</td>')
+                    tablaBody.append('<td>' +res.response[0].celular+'</td>')
+                    tablaBody.append('<td>' +res.response[0].estado_civil+'</td>')
+                    tablaBody.append('<td>' +res.response[0].tipo_sangre+'</td>')
+                    tablaBody.append('<td>' +res.response[0].nss+'</td>')
+                    tablaBody.append('<td>' +res.response[0].alergias+'</td>')
+                    tablaBody.append('<td>' +res.response[0].promedio+'</td>')
+                    tablaBody.append('<td>' +res.response[0].esc_procedencia+'</td>')
+                    tablaBody.append('<td>' +res.response[0].fecha_egreso+'</td>')
                     tablaBody.append('</tr>');
+                }else{
+                    alert("Estudiante no encontrado")
                 }
+
             },
             error: function(error){
                 console.log("error: "+error);
@@ -36,7 +61,7 @@ $(function(){
  * Agregar un nuevo usuario
  */
 $(function(){
-    $('#nuevo').click(function(){
+    $('#btnRegistrar').click(function(){
         var array = [];
         array.push($("#nombre").val());
         array.push($("#paterno").val());
@@ -114,8 +139,8 @@ $(function(){
     $('#filtrar').click(function(){
         var filtro = $('#filtro').val();
         var orden = $('#orden').val();
-        var tablaBody = $("#tablaInicio2 tbody");
-        var tablaHead = $("#tablaInicio2 thead");
+        var tablaBody = $("#tablaInicio tbody");
+        var tablaHead = $("#tablaInicio thead");
         var txtFiltro = "";
         console.log(filtro);
         if(filtro == 0){
@@ -124,8 +149,8 @@ $(function(){
             txtFiltro = '/listarestudiantespormunicipio/'+orden;
         }
         else if(filtro == 2){
-            txtFiltro = '/listarestudiantespormunicipio/'+orden;
-        } else if(filtro == 1){
+            txtFiltro = '/listarestudiantesporpromedio/'+orden;
+        } else if(filtro == 3){
             txtFiltro = '/listarestudiantesporescuela/'+orden;
         }
         else alert("Opción no válida");
@@ -217,17 +242,19 @@ $(function(){
     $('#btnEliminar').click(function(){
         
         var id_est = $('#txtID').val();
+        $('#divMensaje').empty();
 
         $.ajax({
             url: 'http://localhost:3000/estudiante/eliminarestudiante/'+id_est,
             data: {},
             type: 'PUT',
             success: function(res){
-                $('#divMensaje').innerHTML = "<h2>Estudiante Eliminado Correctamente</h2>"
-                alert("Eliminado");
+                $('#divMensaje').append("<img src='./images/palomita.png'/>")
+                $('#divMensaje').append("<h3>Estudiante Eliminado</h3>")
             },
             error: function(error){
-                console.log("error: "+error);
+                $('#divMensaje').append("<img src='./images/error.png'/>")
+
             }
         });
     });
