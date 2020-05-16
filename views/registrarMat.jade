@@ -1,0 +1,93 @@
+extends layout
+
+block content
+    head
+        style(type='text/css').
+            body{
+                background:url("./images/hospital4.jpg");
+            }
+
+            .container{
+                margin-top: 20px;
+                margin-bottom: 20px;
+                padding-bottom:10px;
+                background-color: white;
+            }
+
+    nav(class="navbar navbar-expand-md bg-dark navbar-dark")
+        <!-- Brand -->
+        a(class="navbar-brand" href="/") Estudiante
+
+        <!-- Toggler/collapsibe Button -->
+        button(class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar")
+            span(class="navbar-toggler-icon")
+
+        <!-- Navbar links -->
+        div(class="collapse navbar-collapse" id="collapsibleNavbar")
+            ul(class="navbar-nav")
+                li(class="nav-item")
+                    a(class="nav-link" href="/") Inicio
+                li(class="nav-item")
+                    a(class="nav-link" href="/registrar") Registrar Estudiante
+                li(class="nav-item")
+                    a(class="nav-link" href="/buscar") Buscar Estudiante
+                li(class="nav-item")
+                    a(class="nav-link" href="/eliminar") Eliminar Estudiante
+                li(class="nav-item")
+                    a(class="nav-link" href="/actualizar") Actualizar Estudiante
+  
+
+    div(class = "container")
+        h2 Formulario de Registro Estudiante
+        form(id="subForm" name="subForm" method="GET" action="")
+            div(class="form-group")
+                label(for="nombre") Nombre:
+                input(type="text" class="form-control"   id="nombre")
+            div(class="form-group")
+                label(for="semestre") Semestre:
+                select(class="form-control"  id="semestre")
+                    option(value="1") 1
+                    option(value="2") 2
+                    option(value="3") 3
+                    option(value="4") 4
+                    option(value="5") 5
+                    option(value="6") 6
+                    option(value="7") 7
+                    option(value="8") 8
+                    option(value="9") 9
+                    option(value="10") 10
+            div(class="form-group")
+                label(for="carrera") Carrera:
+                select(class="form-control"  id="carrera")
+                    option(value="1") Contaduría Pública y Finanzas
+                    option(value="2") Negocios Internacionales
+                    option(value="3") Administración Turística
+                    option(value="4") Gastronomia
+                    option(value="5") Ingeniería Ambiental
+                    option(value="6") Ingeniaría Civil
+                    option(value="7") Ingeniería Industrial
+                    option(value="8") Ingeniería de Software y Sistemas Computacionales
+                    option(value="9") Arquitectura
+                    option(value="10") Enfermería
+                    option(value="11") Fisioterapia
+                    option(value="12") Nutrición
+                    option(value="13") Psicología
+                    option(value="14") Ciencias del Deporte
+                    option(value="15") Lenguas Modernas e Interculturalidad
+                    option(value="16") Gestión y Desarrollo de las Artes
+                    option(value="17") Derecho
+                    option(value="18") Educación
+                    option(value="19") Comunicación y Medios Digitales
+            div(class="form-group")
+                label(for="ciclo") Ciclo:
+                input(type="text" class="form-control"   id="ciclo" placeholder="yyyy-yyyy")
+
+            button(type="button" name="btnRegistrarMat" id="btnRegistrarMat" value="btnRegistrarMat" class="btn btn-primary") Submit
+
+    link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css")
+    script(src="./javascripts/jquery.js")
+    script(src="./javascripts/funciones.js")
+    script(src="./javascripts/funciones2.js")
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js")
+    script(src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js")

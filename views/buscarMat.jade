@@ -3,13 +3,6 @@ extends layout
 block content
   head 
     style(type='text/css').
-        table {
-            border-collapse : collapse;
-        }
-
-        th, th {
-          border: black 1px solid;
-        }
         
         .container{
           margin-top: 20px;
@@ -43,56 +36,39 @@ block content
           a(class="nav-link" href="/actualizarMat") Actualizar Materia
         li(class="nav-item")
           a(class="nav-link" href="/eliminarMat") Eliminar Materia
-        li(class="nav-item")
-          a(class="nav-link" href="/buscarMat") Buscar Materia
   
   div(class="container pl-5 pr-5")
     div(class="row")
-      h2 Lista de Estudiantes
+      h2 Lista de Materias
     div(class="row")        
       select(name="filtro" id="filtro")
         option(value="0") Nombre
-        option(value="1") Municipio
-        option(value="2") Promedio
-        option(value="3") Escuela
+        option(value="1") Semestre
       select(name="orden" id="orden")
         option(value="ASC") ASC
         option(value="DESC") DESC
-      input(type="button" name="filtrar" id="filtrar" value="Filtrar" class ="btn btn-primary")
+      input(type="button" name="MostrarMat" id="MostrarMat" value="Mostrar" class ="btn btn-primary")
     br
     div(class="row")
-      div(class="table-responsive")
         table(id="tablaInicio" class="table table-bordered table-striped")
-          thead(class="thead-dark")
-            tr
-              th Apellido Paterno
-              th Apellido Materno
-              th Nombre
-              th Sexo
-              th Fecha de Nacimiento
-              th CURP
-              th Calle
-              th N&uacute;mero
-              th Colonia
-              th Municipio
-              th Estado
-              th Pais
-              th CP
-              th Email
-              th Tel
-              th Cel
-              th Estado Civil
-              th Tipo de Sangre
-              th NSS
-              th Alergias
-              th Promedio
-              th Escuela Procedencia
-              th Fecha de Egreso
-          tbody
+            thead(class="thead-dark")
+                tr
+                    th ID
+                    th Nombre
+                    th Semestre
+                    th Id_car
+                    th Licenciatura
+                    th Ciclo
+            tbody
     
+  
+  <!-- Latest compiled and minified CSS -->
   link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css")
+  //link(rel="stylesheet" href="//cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css")
   script(src="./javascripts/jquery.js")
   script(src="./javascripts/funciones.js")
+  script(src="./javascripts/funciones2.js")
+  //script(src="//cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js")
   script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js")
   script(src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js")
   script(src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js")
